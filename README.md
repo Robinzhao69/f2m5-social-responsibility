@@ -35,4 +35,8 @@ Zo kun je makkelijker aanpassingen doen aan je website als deze ingewikkelder wo
 Lees de documentatie: [http://platesphp.com/](http://platesphp.com/)
  
  
- 
+ ### Team
+
+ leden: Shihua liu, Thijn Glas en Robin Zhao
+
+ team repo: https://github.com/Shihua-liu/transformers-community
