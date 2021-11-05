@@ -12,31 +12,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<!-- test -->
+    <!-- test voor brach push -->
 <body>
     <header class="header">
-        <?php echo $this->fetch( 'nav' ) ?>
+        <?php echo $this->fetch('nav'); ?>
     </header>
-        
     <div class="login">
-        <?php echo $this->section( 'logbutt' ) ?>
-    </div>
-      
-    
-<!-- hier zit de fotoslider en slogun -->
-    <div class="section1">
-        <?php echo $this->section( 'section' ) ?>
+        <?php echo $this->section('logbutt'); ?>
     </div>
 
-    <div class="iris" data-aos="fade-up" data-aos-duration="3000">
-        <?php echo $this->section( 'info' ) ?>
+    <div class="transformer-worden">
+        <?php echo $this->section('word-transformer'); ?>
     </div>
 
     <div class="footer">
-        <?php echo $this->section( 'footer' ) ?>
+        <?php echo $this->section('footer'); ?>
     </div>
 </body>
 <script>
     AOS.init();
 </script>
+<script src="../js/word-transformer.js"></script>
 </html>

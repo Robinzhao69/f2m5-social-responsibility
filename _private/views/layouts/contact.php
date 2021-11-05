@@ -14,22 +14,15 @@
 </head>
 <!-- test -->
 <body>
-    <header class="header">
+<header class="header">
         <?php echo $this->fetch( 'nav' ) ?>
     </header>
-        
     <div class="login">
         <?php echo $this->section( 'logbutt' ) ?>
     </div>
-      
-    
-<!-- hier zit de fotoslider en slogun -->
-    <div class="section1">
-        <?php echo $this->section( 'section' ) ?>
-    </div>
 
-    <div class="iris" data-aos="fade-up" data-aos-duration="3000">
-        <?php echo $this->section( 'info' ) ?>
+    <div class="contact" data-aos="fade-right" data-aos-duration="1500">
+        <?php echo $this->section( 'con-info' ) ?>
     </div>
 
     <div class="footer">

@@ -1,88 +1,518 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
-
-body {
-    font-family: "Nunito", "Open Sans", Arial, Helvetica, sans-serif;
-    background: rgba(20, 58, 135, 0.8);
+@font-face {
+    font-family: "DNpro";
+    src: url(../font/DN\ PRO\ DN\ PRO\ MEDIUM.OTF);
 }
 
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    background: #fff;
+h1{
+    padding: 0; 
+    margin: 0;
+}
+h3{
+    padding: 0; 
+    margin: 0;
 }
 
-header {
-    padding: 20px;
-    background: rgba(0, 13, 39);
-    color: #fff;
+/* header met login buttons en logo */
+
+body{
+    font-family: 'Noto Sans Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: auto;
+    background: white;
+    /* background: linear-gradient(to left, #D94708,#FE9060 , #D94708 ); */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-header h1 {
-    margin-bottom: 0;
+
+
+.header{
+    background-color: #ffffff;
+    color: #ffffff;
+    box-shadow: 0px 2px 9px 1px rgba(0,0,0,0.52);
+    position: relative;
+    width: 100%;
+    z-index: 3;
 }
 
-nav {
-    padding: 20px;
-    background: rgb(162, 184, 232);
-    color: #fff;
-}
-
-.content {
-    background: #ffffff;
-    min-height: 100px;
-    padding: 20px;
-}
-
-nav ul {
+.header ul{
     margin: 0;
     padding: 0;
     list-style: none;
-
+    overflow: hidden;
+    background-color: #ffffff;
 }
 
-nav ul li {
+.header ul a{
     display: block;
-}
-
-nav ul li a {
-    display: block;
-    padding: 5px 10px;
-    background: #000;
-    color: #fff;
+    padding: 10px;
+    border-left: 1px solid #aaa;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
     text-decoration: none;
 }
 
-nav ul li .active, nav ul li a:hover {
-    color: #000;
-    background: #fff
+.header ul a:hover{
+    background-color: #696969;
+}
+
+.header ul a:active{
+    background-color: #696969;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(blue, rgb(76, 6, 156));
 }
 
 
-aside {
-    background: rgb(162, 184, 232);
-    min-height: 100px;
+body > div > button{
+    font-family: DNpro;
+    margin: 15px;
+    padding: 12px 50px;
+    background: #0089FA;
+    color: white;
+    border-left:  solid #055ba1 ;
+    border-top:  solid #0e79d1 ;
+    border-right:  solid #0536a1 ;
+    border-bottom:  solid #03188d ;
+    border-radius: 10px;  
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+}
+
+
+body >div > a > button{
+    font-family: DNpro;
+    margin: 15px;
+    padding: 12px 50px;
+    background: #0089FA;
+    color: white;
+    border-left:  solid #055ba1 ;
+    border-top:  solid #0e79d1 ;
+    border-right:  solid #0536a1 ;
+    border-bottom:  solid #03188d ;
+    border-radius: 10px;  
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+}
+
+button:hover {
+    background: rgb(12, 87, 185);
+    border-left:  solid #045292 ;
+    border-top:  solid #0d6dbb ;
+    border-right:  solid #053292 ;
+    border-bottom:  solid #04167a ;
+    cursor: pointer;
+}
+
+
+
+/* slogun naast de fotoslider */
+
+.section1{
+    background: white;
+    /* background: linear-gradient(to left,#D94708, #FE9060, #D94708); */
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 37% 38% 25% ;
+    grid-template-areas: "slogun foto";
+}
+
+.slogun{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    grid-area: slogun;
+    height: 40vh;
+    margin: auto;
+    color: black;
+    text-align: center;
+    
+}
+
+#trans {
+    display: inline-block;
+    position: relative;
+    color: black;
+}
+  
+#trans:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 10px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+#trans:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.slogun > h1{
+    font-size: 70px;
+    border: solid;
+}
+
+.slogun > h4{
+    font-size: 26px;
+}
+
+.lid{
+    color: black;
+    text-decoration: none;
+    padding: 10px 50px;
+    background: radial-gradient(rgb(255, 136, 0), orange);
+    border-radius: 5px;
+    
+}
+
+.fotoslider{
+    background: gray;
+    grid-area: foto;
+    margin: 30px;
+}
+
+.autofill{
+    width: 600px;
+    height: auto;
+}
+.fill{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.section2{
+    background-color: black;
+}
+
+/* over iris */
+.iris{
+    display: grid;
+    grid-template-columns: 3vw;
+    grid-template-rows: 1vw;
+    margin: 40px;
+    grid-template-areas: 
+    "img img img tl tl tl tl"
+    "img img img sb sb sb sb"
+    "img img img ai ai ai ai"
+    "op op op ai ai ai ai"
+    "op op op ai ai ai ai";
+    
+}
+
+.titel{
+    grid-area: tl;
+    text-align: center;
+    margin: 20px
+}
+
+.sub-titel{
+    grid-area: sb;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.oprichter{
+    grid-area: op;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about-iris{
+    grid-area: ai;
+    text-align: center;
+    margin: 40px;
+    word-wrap: break-word;      /* IE 5.5-7 */
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+    white-space: pre-wrap;      /* current browsers */
+}
+
+.iris > img{
+    grid-area: img;
+    margin: auto;
+    border: #000000 3px solid;
+}
+
+/* footer, slogun van footer, icons van socialmedia*/
+.footer{
+    background: blue;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: auto;
+}
+.slogun-footer{
+    padding: 0; margin: 0;
+}
+
+.slogun-footer > h1::first-letter{
+    color: #D94708;
+    
+}
+.slogun-footer > h3::first-letter{
+    color: #D94708;
+}
+
+.social > h2::first-letter{
+    color: #D94708;
+}
+
+.footer-menu > li > a > .current{
+    color: #D94708;
+}
+
+
+.footer > .social > img{
+    width: 22%;
+    height: auto;
+}
+
+.footer-menu{
+    list-style: none;
+}
+
+.footer-menu  > li > a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-menu > li > a:hover{
+    color: #D94708;
+}
+
+.social > h2{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+/* Menu voor mobiel*/
+.menu{
+    font-family: DNpro;
+}
+
+.header .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon{
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon{
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition:background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background:#333;
+    content:"";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+
+.header .menu-icon .nav-icon:after{
+    background:#333;
+    content:"";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+
+.header .menu-btn{
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu{
+    max-height: 600px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+    color: white;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{ 
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top:0;
+}
+
+.header ul a {
+    border-left: 0px solid;
+}
+
+i{
+    width: 100px;
+    height: 100px;
+}
+
+.template-con{
+    height: 40rem;
+    width: 30rem;
+    background-color: rgba(128, 128, 128, 0.637);
+    display: flex;
     padding: 20px;
+    justify-self: center;
+    align-self: center;
+    flex-direction: column;
 }
 
-.top-10 ol {
-    margin: 0;
-    padding: 0 20px;
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: max-content;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 25px;
+}
+.blog-con > h2{
+    display: flex;
+    justify-content: center;
 }
 
-footer {
-    padding: 20px;
-    color: #fff;
-    background: rgba(0, 13, 39);
-}
 
-@media screen and (min-width: 900px) {
-    main {
-        grid-template-columns: 1fr 350px;
+
+
+/* Menu voor desktop */
+
+@media (max-width:0px){
+    .logo{
+        width: 400px;
+        height: auto;
     }
 
-    nav ul li a {
-        display: inline-block;
+    .header li{
+        float:left;
     }
+    .header li a{
+        padding: 10px 10px;
+    }
+    .header .menu{
+        clear: none;
+        float:right;
+        max-height: none;
+    }
+    .header .menu-icon{
+        display: none;
+    }
+    
+}
+
+@media (max-width:1000px ){
+    .section1{
+        display: flex;
+        flex-direction:column ;
+        height: 100vh;
+    }
+
+    .slogun{
+        margin-top: 40px;
+    }
+
+    .slogun > h1{
+        font-size: 50px;
+    }
+
+    .slogun > h4{
+        margin-bottom: 0px;
+    }
+
+    
+    .iris{
+        display: grid;
+        margin: 10px;
+        grid-template-areas: 
+        "tl tl tl"
+        "tl tl tl"
+        "tl tl tl"
+        "img img img"
+        "op op op"
+        "sb sb sb"
+        "ai ai ai";      
+    }
+
+    .iris > p{
+        text-align: left;
+        white-space: normal;
+    }
+}
+
+@media (max-width:349px){
+    .login{
+        flex-direction: column;
+    }
+
+    .slogun{
+        margin-top: 40px;
+    }
+
+    .slogun > h1{
+        font-size: 40px;
+    }
+
+    .slogun > h4{
+        margin-bottom: 0px;
+    }
+
+    .iris{
+        display: grid;
+        margin: 5px;
+        grid-template-areas: 
+        "tl tl tl"
+        "tl tl tl"
+        "tl tl tl"
+        "img img img"
+        "op op op"
+        "sb sb sb"
+        "ai ai ai";      
+    }
+
+    .iris > p{
+        text-align: left;
+        white-space: normal;
+    }
+
 
 }

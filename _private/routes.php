@@ -12,7 +12,13 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	// Lees de docs, daar zie je hoe je routes kunt maken: https://github.com/skipperbent/simple-php-router#routes
 
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
-	SimpleRouter::get( '/login', 'RegistrationController@log' )->name( 'log' );
+	SimpleRouter::get( '/con', 'WebsiteController@contact' )->name( 'con' );
+	SimpleRouter::get( '/over', 'WebsiteController@over' )->name( 'over' );
+	SimpleRouter::get( '/trans', 'WebsiteController@trans' )->name( 'trans' );
+	SimpleRouter::get( '/blog-index', 'BlogController@index' )->name( 'blog-index' );
+	SimpleRouter::get( '/blog', 'BlogController@blog' )->name( 'blog' );
+	SimpleRouter::post( '/blog', 'BlogController@save' )->name( 'blog.save' );
+
 
 
 
